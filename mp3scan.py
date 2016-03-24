@@ -12,7 +12,7 @@ def generate_settings():
 	patterns = list()
 	patterns.append({'path':'c:/','names':'*.mp3'})
 	patterns.append({'path':'c:/','names':'*.avi'})
-	settings = {'about': True, 'applications': False, 'disk': {'user': 'admin4@itic.ru','password':'qazwsx_12'},'files': patterns}
+	settings = {'about': True, 'applications': False, 'disk': {'user': 'username','password':'password'},'files': patterns}
 
 	settings_file = open('settings.json','tw')
 	settings_file.write(json.dumps(settings))

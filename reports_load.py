@@ -3,7 +3,7 @@ import io, os, json
 import yandexwebdav
 
 def generate_settings():
-	settings = {'disk': {'user': 'admin4@itic.ru','password':'qazwsx_12'}}
+	settings = {'disk': {'user': 'username','password':'password'}}
 
 	settings_file = open('load_settings.json','tw')
 	settings_file.write(json.dumps(settings))
