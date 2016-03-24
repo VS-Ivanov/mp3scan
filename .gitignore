@@ -5,3 +5,4 @@ build/*
 disk/*
 settings.json
 load_settings.json
+__pycache__/*

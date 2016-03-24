@@ -2,6 +2,7 @@ from flask import Flask
 import yandexwebdav
 import os, io
 import json
+import sync
 
 def generate_settings():
 	settings = {'disk': {'user': 'username','password':'password'}}
@@ -30,11 +31,8 @@ app = Flask(__name__)
 @app.route('/index')
 def index():
 	return 'WebApp is running...'
-# проводим синхронизацию с яндекс диском
-if not os.path.exists('./disk'):
-	os.mkdir('./disk')
 
-ydisk = yandexwebdav.Config({'user':settings['disk']['user'],'password':settings['disk']['password']})
-ydisk.sync('./disk/*', '/reports/*')
+# синхронизация с яндекс диском
+sync.sync_disk(settings)
 
 app.run()

@@ -70,7 +70,7 @@ now = now.replace(':','-')
 now = now.replace('.', '-')
 now = now.replace(' ', '-')
 
-report_file_name = str(report['mac_int'])+' '+now+'.txt'
+report_file_name = str(report['mac_int'])+'-'+now+'.txt'
 report_file_path = './report/'+report_file_name	
 report_file = open(report_file_path,'w')
 report_file.write(json.dumps(report))
