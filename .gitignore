@@ -2,3 +2,6 @@ report/*
 wrk/*
 dist/*
 build/*
+disk/*
+settings.json
+load_settings.json
